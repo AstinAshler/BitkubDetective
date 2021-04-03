@@ -10,9 +10,8 @@ def Detect(Address):
     if i['tokenSymbol'] == 'BKTC':
       _df.append(i)
   for data in _df:
-    ls.append(data['to'])
     print('Hash:'+data['blockHash'] +' '+'From:'+data['from']+' '+'To:'+data['to']+' '+'Amount'+str(int(data['value'])/10**18))
-    ls.append(data['to'])
+#    Detect(data['to']) // a string bug here
 #Address = '0xEcA19B1a87442b0c25801B809bf567A6ca87B1da'
 Address = str(input())
 Detect(Address)
